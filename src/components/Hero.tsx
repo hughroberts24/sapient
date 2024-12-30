@@ -26,7 +26,7 @@ export default function Hero() {
             <a href="#contact" className="px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 text-white text-lg font-semibold hover:opacity-90 transition-opacity">
               Start Your Evolution
             </a>
-            <a href="#work" className="px-8 py-4 rounded-full border border-purple-500/50 text-purple-500 text-lg font-semibold hover:bg-purple-500/10 transition-all">
+            <a href="/work" className="px-8 py-4 rounded-full border border-purple-500/50 text-purple-500 text-lg font-semibold hover:bg-purple-500/10 transition-all">
               View Our Work
             </a>
           </div>
