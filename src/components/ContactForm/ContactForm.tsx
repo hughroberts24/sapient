@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Send } from 'lucide-react';
 import Input from './Input';
 import AnimatedElement from '../AnimatedElement';
+import emailjs from 'emailjs-com';
+
 
 export default function ContactForm() {
   const [formState, setFormState] = useState({
@@ -12,9 +14,27 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formState);
+  
+    emailjs
+      .send(
+        'service_rvlyq6f', // Replace with your EmailJS Service ID
+        'template_sm3zjfb', // Replace with your EmailJS Template ID
+        formState,          // Send the form data
+        'U_z6vdYLFS0U9Pf-Z'      // Replace with your EmailJS User ID
+      )
+      .then(
+        (result) => {
+          console.log('Email successfully sent:', result.text);
+          alert('Your message has been sent successfully!');
+          setFormState({ name: '', email: '', message: '' }); // Clear the form
+        },
+        (error) => {
+          console.error('Failed to send email:', error.text);
+          alert('There was an error sending your message. Please try again later.');
+        }
+      );
   };
+  
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormState(prev => ({
