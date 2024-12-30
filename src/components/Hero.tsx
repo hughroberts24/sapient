@@ -44,7 +44,7 @@ export default function Hero() {
           <AnimatedElement animation="fade-up" delay={400}>
             <div className="p-8 rounded-2xl bg-white/5 backdrop-blur-lg border border-white/10 hover:border-purple-500/50 transition-all">
               <Cpu className="w-12 h-12 text-cyan-500 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">AI Integration</h3>
+              <h3 className="text-xl font-semibold text-white mb-2"> Integration</h3>
               <p className="text-gray-400">Harness the power of artificial intelligence to drive innovation.</p>
             </div>
           </AnimatedElement>
