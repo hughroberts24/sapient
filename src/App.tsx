@@ -17,7 +17,7 @@ function App() {
         <meta property="og:title" content="Sapient Development" />
         <meta property="og:description" content="Sapient Development" />
         <meta property="og:image" content="/og-image.jpg" />
-        <meta property="og:url" content="https://yourwebsite.com" />
+        <meta property="og:url" content="https://sapientdev.com" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <div className="bg-black text-white min-h-screen">
