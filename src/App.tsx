@@ -11,13 +11,20 @@ function App() {
   return (
     <Router>
       <Helmet>
+        {/* Set the page title and description */}
         <title>Sapient Development</title>
         <meta name="description" content="Sapient Development" />
-        <link rel="icon" href="/favicon.ico" />
+
+        {/* Ensure the favicon is correctly referenced */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+        {/* Open Graph metadata */}
         <meta property="og:title" content="Sapient Development" />
         <meta property="og:description" content="Sapient Development" />
         <meta property="og:image" content="/og-image.jpg" />
         <meta property="og:url" content="https://sapientdev.com" />
+
+        {/* Twitter Card metadata */}
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <div className="bg-black text-white min-h-screen">
